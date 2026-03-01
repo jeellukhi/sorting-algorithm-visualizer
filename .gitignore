@@ -1,0 +1,28 @@
+# OS
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python server cache
+__pycache__/
+*.pyc
+
+# Node (if added later)
+node_modules/
+dist/
+build/
+
+# Temp exports/screenshots
+exports/
+screenshots/

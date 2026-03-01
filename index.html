@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Algorithm Visualizer & Analyzer</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Sorting Algorithm Visualizer & Analyzer</h1>
+      <p>Step-by-step sorting visualization with performance metrics.</p>
+    </header>
+
+    <section class="controls">
+      <label>
+        Algorithm
+        <select id="algorithmSelect">
+          <option value="bubble">Bubble Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="merge">Merge Sort</option>
+          <option value="quick">Quick Sort</option>
+          <option value="heap">Heap Sort</option>
+        </select>
+      </label>
+
+      <label>
+        Input Size: <span id="sizeValue">30</span>
+        <input id="sizeRange" type="range" min="10" max="100" value="30">
+      </label>
+
+      <label>
+        Speed: <span id="speedValue">50</span> ms
+        <input id="speedRange" type="range" min="10" max="200" value="50">
+      </label>
+
+      <label class="toggle-label">
+        Show Values on Bars
+        <input id="showValuesChk" type="checkbox" checked>
+      </label>
+
+      <label class="toggle-label">
+        Dark Theme
+        <input id="themeToggleChk" type="checkbox">
+      </label>
+
+      <label class="full-row">
+        Custom Input (comma or space separated numbers)
+        <input id="customInput" type="text" placeholder="Example: 9, 3, 7, 1, 5">
+      </label>
+
+      <div class="button-row">
+        <button id="applyInputBtn" type="button">Use Custom Input</button>
+        <button id="generateBtn" type="button">Generate Array</button>
+        <button id="runBtn" type="button">Run</button>
+        <button id="stepBtn" type="button">Next Step</button>
+        <button id="compareBtn" type="button">Compare All</button>
+        <button id="resetBtn" type="button">Reset</button>
+      </div>
+
+      <p id="feedbackText" class="feedback info">Tip: Enter custom values and click "Use Custom Input".</p>
+    </section>
+
+    <section class="stats">
+      <div>Comparisons: <strong id="comparisonCount">0</strong></div>
+      <div>Swaps: <strong id="swapCount">0</strong></div>
+      <div>Elapsed: <strong id="elapsedTime">0 ms</strong></div>
+      <div>Status: <strong id="statusText">Ready</strong></div>
+    </section>
+
+    <section class="info-panel">
+      <div>
+        <h2>Algorithm Description</h2>
+        <p id="algorithmDescription"></p>
+      </div>
+      <div>
+        <h2>Color Legend</h2>
+        <div class="legend-row">
+          <span class="legend-box legend-default"></span>
+          <span>Unprocessed bar</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-box legend-active"></span>
+          <span>Currently compared bar</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-box legend-sorted"></span>
+          <span>Final sorted state</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="complexity-panel">
+      <h2>Complexity Analysis</h2>
+      <p>Theoretical complexity for the selected algorithm.</p>
+      <div class="complexity-grid">
+        <div>Input Size (n): <strong id="inputSizeLabel">0</strong></div>
+        <div>Space Complexity: <strong id="spaceComplexity">-</strong></div>
+      </div>
+      <div class="complexity-table-wrap">
+        <table class="complexity-table">
+          <thead>
+            <tr>
+              <th>Case</th>
+              <th>Time Complexity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Best</td>
+              <td id="bestComplexity">-</td>
+            </tr>
+            <tr>
+              <td>Average</td>
+              <td id="avgComplexity">-</td>
+            </tr>
+            <tr>
+              <td>Worst</td>
+              <td id="worstComplexity">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="visualizer-panel">
+      <div id="barContainer" class="bar-container" aria-label="Sorting bars"></div>
+    </section>
+
+    <section class="output-panel">
+      <h2>Output</h2>
+      <p id="outputArray">Sorted output will appear here after completion.</p>
+      <div class="export-row">
+        <button id="saveResultBtn" type="button">Save Snapshot</button>
+        <button id="clearSavedBtn" type="button">Clear Saved</button>
+        <button id="exportJsonBtn" type="button">Export JSON</button>
+        <button id="exportCsvBtn" type="button">Export CSV</button>
+      </div>
+      <p id="savedCountText">Saved snapshots: 0</p>
+    </section>
+
+    <section class="comparison-panel">
+      <h2>Real-Time Performance Comparison</h2>
+      <p>Runs all algorithms on the same input and compares runtime, comparisons, and swaps.</p>
+      <div id="comparisonChart" class="comparison-chart">
+        Click "Compare All" to generate comparison results.
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
