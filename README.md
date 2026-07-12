@@ -1,11 +1,8 @@
 # Sorting Algorithm Visualizer & Analyzer
 
 ## 0. Project Metadata
-- Student Name: `<Your Name>`
-- Enrollment/Roll No.: `<Your Roll Number>`
-- Course/Subject: `<Your Course>`
-- Guide/Faculty: `<Faculty Name>`
-- Submission Date: `<DD-MM-YYYY>`
+- Student Name: Manthan Patel
+- Roll No.: 2310030013
 
 ## 1. Project Overview
 This project helps students understand sorting algorithms through:
