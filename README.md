@@ -1,9 +1,5 @@
 # Sorting Algorithm Visualizer & Analyzer
 
-## 0. Project Metadata
-- Student Name: Manthan Patel
-- Roll No.: 2310030013
-
 ## 1. Project Overview
 This project helps students understand sorting algorithms through:
 - step-by-step bar visualization
