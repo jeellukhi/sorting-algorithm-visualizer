@@ -155,3 +155,6 @@ Then update this section:
 - Main documentation: `README.md`
 - Viva preparation notes: `VIVA_NOTES.md`
 - Full report format: `REPORT.md`
+
+## 15. Project Link
+- https://jeellukhi.github.io/sorting-algorithm-visualizer/
