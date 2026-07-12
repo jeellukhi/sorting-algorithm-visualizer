@@ -46,7 +46,7 @@ No paid tools or subscriptions are required.
 
 ## 4. Project Structure
 ```text
-Sorting Algorithem/
+sorting-algorithm-visualizer/
   index.html
   README.md
   VIVA_NOTES.md
@@ -60,9 +60,9 @@ Sorting Algorithem/
 ```
 
 ## 5. How To Run
-1. Open terminal in project folder:
+1. Open terminal in the project folder:
 ```powershell
-cd "D:\Sorting Algorithem"
+cd <your-project-folder>
 python -m http.server 5500
 ```
 2. Open browser:

@@ -143,7 +143,7 @@ The project follows a modular client-side architecture:
 
 ## 12. How to Run
 ```powershell
-cd "D:\Sorting Algorithem"
+cd <your-project-folder>
 python -m http.server 5500
 ```
 Open `http://localhost:5500` in browser.

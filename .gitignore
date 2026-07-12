@@ -26,3 +26,5 @@ build/
 # Temp exports/screenshots
 exports/
 screenshots/
+*.zip
+*.rar
